@@ -1,0 +1,77 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+# tRef= 0.696834, 0.497738, 0.298643, 0.0995477, -0.0995477, -0.298643, -0.497738, -0.696834,
+ tRef= 100*10.,
+ sRef= 100*35.,
+ viscAr=1E-5,
+ viscAh=1E-5,
+ useSmag3D = .TRUE.,
+#- to recover results with missing scaling:
+ smag3D_coeff=8.838834764831845E-4,
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+ diffKhT=1E-5,
+ diffKrT=1E-5,
+ diffKhS=1E-5,
+ diffKrS=1E-5,
+ staggerTimeStep=.TRUE.,
+ saltAdvScheme=77,
+ tempAdvScheme=77,
+ eosType='LINEAR',
+ tAlpha=2.E-4,
+ sBeta =0.E-4,
+ gravity=9.81,
+ f0=0.e-4,
+ beta=0.E-11,
+ nonHydrostatic=.TRUE.,
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+ exactConserv=.TRUE.,
+ hFacMin=0.2,
+ readBinaryPrec=64,
+#- not safe to use globalFiles in multi-processors runs
+#globalFiles=.TRUE.,
+#useSingleCpuIO=.TRUE.,
+ plotLevel=0,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=2000,
+ cg2dTargetResidual=1.E-13,
+ cg3dMaxIters=1000,
+ cg3dTargetResidual=1.E-13,
+ &
+
+# Time stepping parameters
+ &PARM03
+ nIter0=0,
+ nTimeSteps=10,
+ deltaT=0.5,
+ abEps=0.1,
+ momDissip_In_AB=.FALSE.,
+ pChkptFreq=0.0,
+ chkptFreq=0.0,
+ dumpFreq=1.0,
+ monitorSelect=2,
+ monitorFreq=1.,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingCartesianGrid=.TRUE.,
+ delX=1000*1.0e-1,
+ delY=1*1.0e1,
+ delR=100*1.0e-1,
+ &
+
+# Input datasets
+ &PARM05
+ hydrogThetaFile='TEMP.bin',
+ uVelInitFile='U.bin',
+ bathyFile='BAT.bin',
+ &

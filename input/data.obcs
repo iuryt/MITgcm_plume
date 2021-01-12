@@ -1,0 +1,17 @@
+# Open-boundaries
+ &OBCS_PARM01
+ OB_Ieast=1*-2,
+ useOBCSsponge=.FALSE.,
+ useOrlanskiEast=.TRUE.,
+ useOBCSbalance=.TRUE.,
+ OBCS_monitorFreq=400.,
+ OBEtFile='TEMP_E.bin',
+ OBEuFile='U_E.bin',
+ useOBCSprescribe=.TRUE.,
+ &
+ 
+# Orlanski parameters
+ &OBCS_PARM02
+ Cmax=0.45,
+ cVelTimeScale=1000.,
+ &

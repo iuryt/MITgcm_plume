@@ -1,0 +1,5 @@
+build/*
+run/*
+input/*.bin
+input/*.init
+*/.ipynb_checkpoints/
