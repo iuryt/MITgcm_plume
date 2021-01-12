@@ -1,12 +1,16 @@
 # Open-boundaries
  &OBCS_PARM01
- OB_Ieast=1*-2,
+ OB_Ieast=1*-1,
+ OB_Iwest=1*1,
  useOBCSsponge=.FALSE.,
- useOrlanskiEast=.TRUE.,
+ useOrlanskiWest=.TRUE.,
+ useOrlanskiEast=.FALSE.,
  useOBCSbalance=.TRUE.,
  OBCS_monitorFreq=400.,
  OBEtFile='TEMP_E.bin',
  OBEuFile='U_E.bin',
+ OBWtFile='TEMP_W.bin',
+ OBWuFile='U_W.bin',
  useOBCSprescribe=.TRUE.,
  &
  
